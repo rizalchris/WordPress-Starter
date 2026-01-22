@@ -4,20 +4,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function enqueue_jquery_script() {
-	wp_enqueue_script( 'jquery' );
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_jquery_script' );
-
+add_theme_support( 'woocommerce' );
 add_theme_support( 'post-thumbnails' );
 remove_theme_support( 'widgets-block-editor' );
-
 add_filter( 'use_block_editor_for_post', '__return_false' );
 
 
 register_nav_menus( [
 	'primary' => 'Primary Menu',
 ] );
+
+function enqueue_jquery_script() {
+	wp_enqueue_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_jquery_script' );
 
 function enqueue_assets() {
 	if ( is_admin() ) {
