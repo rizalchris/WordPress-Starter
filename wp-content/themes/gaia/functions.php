@@ -4,8 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// add_theme_support( 'woocommerce' );
-// add_theme_support( 'post-thumbnails' );
+add_theme_support( 'woocommerce' );
+add_editor_style( 'style.css' );
+add_theme_support( 'post-thumbnails' );
 add_filter( 'use_block_editor_for_post', '__return_false', 100 );
 add_filter( 'use_block_editor_for_post_type', '__return_false', 100 );
 remove_theme_support( 'widgets-block-editor' );

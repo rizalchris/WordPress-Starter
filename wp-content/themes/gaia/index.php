@@ -1,11 +1,13 @@
-<?php 
+<?php
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-get_header();
-the_content();
-get_footer();
+get_header(); ?>
 
-?>
+<main id="primary" class="site-main">
+	<?php the_content(); ?>
+</main>
+
+<?php get_footer() ?>
