@@ -41,9 +41,4 @@
 			</ol>
 		</div>
 	</div>
-
-	<div class="row flex-column gap-4">
-		<span class="text-uppercase mb-4 d-block p-3 text-bg-dark">Buttons</span>
-	</div>
-
 </section>
