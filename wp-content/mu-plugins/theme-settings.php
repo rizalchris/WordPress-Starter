@@ -96,3 +96,9 @@ add_filter( 'use_block_editor_for_post_type', '__return_false', 1000 );
 add_action( 'after_setup_theme', function () {
 	remove_theme_support( 'widgets-block-editor' );
 }, 1000 );
+
+// Support WooCommerce
+add_theme_support( 'woocommerce' );
+
+// Enable Featured Images
+add_theme_support( 'post-thumbnails' );

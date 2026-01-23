@@ -8,12 +8,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-get_header(); ?>
-
-<section>
-	<div class="container py-5">
-		<h1>Welcome to the Home Page</h1>
-	</div>
-</section>
-
-<?php get_footer(); ?>
+get_header();
+get_template_part( 'pages/home/typography/typography' );
+get_footer();
