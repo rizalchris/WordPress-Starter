@@ -15,11 +15,7 @@ class Gaia_Templates {
 
 		add_filter( 'theme_page_templates', [ __CLASS__, 'register' ] );
 		add_filter( 'template_include', [ __CLASS__, 'load' ] );
-
-		// HARD override save
 		add_action( 'save_post_page', [ __CLASS__, 'force_save' ], 20, 2 );
-
-		// Inject into WP cache (CRITICAL)
 		add_filter( 'wp_get_theme', [ __CLASS__, 'inject_cache' ] );
 	}
 

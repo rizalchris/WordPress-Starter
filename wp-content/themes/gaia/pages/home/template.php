@@ -10,6 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<h1>Welcome to the Home Page</h1>
+<section>
+	<div class="container py-5">
+		<h1>Welcome to the Home Page</h1>
+	</div>
+</section>
 
 <?php get_footer(); ?>

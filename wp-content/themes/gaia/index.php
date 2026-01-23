@@ -5,9 +5,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
-
-<main id="primary" class="site-main">
-	<?php the_content(); ?>
-</main>
-
+<?php the_content(); ?>
 <?php get_footer() ?>

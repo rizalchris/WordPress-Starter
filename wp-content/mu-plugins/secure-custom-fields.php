@@ -28,8 +28,3 @@ add_filter( 'acf/settings/load_json', function ( $paths ) {
 
 // Load Secure Custom Fields
 require_once WP_CONTENT_DIR . '/mu-plugins/secure-custom-fields/acf.php';
-
-add_action( 'acf/init', function () {
-	error_log( 'SCF JSON: ' . ( defined( 'SCF_ALLOW_LOCAL_JSON' ) ? 'ENABLED' : 'DISABLED' ) );
-	error_log( print_r( acf_get_setting( 'save_json' ), true ) );
-} );
