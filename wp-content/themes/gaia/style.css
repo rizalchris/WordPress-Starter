@@ -83,3 +83,65 @@ h5,
 }
 
 /* B U T T O N S */
+.btn {
+	&:hover,
+	&:focus,
+	&:focus-visible {
+		box-shadow: none;
+	}
+
+	&.btn-primary {
+		background-color: var(--primary);
+		border-color: var(--primary);
+
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			color: var(--primary);
+			background-color: var(--secondary);
+			border-color: var(--primary);
+		}
+	}
+
+	&.btn-secondary {
+		color: var(--primary);
+		background-color: var(--secondary);
+
+		&:hover,
+		&:focus,
+		&:focus-visible {
+			color: var(--secondary);
+			background-color: var(--primary);
+			border-color: var(--primary);
+		}
+	}
+}
+
+/* P A G I N A T I O N */
+.pagination {
+	.page-item {
+		&.active {
+			.page-link {
+				background-color: var(--primary);
+				color: var(--secondary);
+				border-color: var(--primary);
+			}
+		}
+		.page-link {
+			color: var(--primary);
+		}
+	}
+}
+
+/* A C C O R D I O N */
+.accordion {
+	.accordion-item {
+		.accordion-header {
+			.accordion-button {
+				background-color: var(--primary);
+				color: var(--secondary);
+				box-shadow: none;
+			}
+		}
+	}
+}
