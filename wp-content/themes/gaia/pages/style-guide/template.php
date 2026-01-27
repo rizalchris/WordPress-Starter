@@ -9,6 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
+get_template_part( 'pages/style-guide/components/hero' );
 get_template_part( 'pages/style-guide/components/typography' );
 get_template_part( 'pages/style-guide/components/buttons' );
 get_template_part( 'pages/style-guide/components/cards' );

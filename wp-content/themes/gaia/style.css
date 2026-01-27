@@ -82,6 +82,20 @@ h5,
 	line-height: 1.6;
 }
 
+/* H E A D E A R */
+header {
+	a {
+		color: var(--secondary);
+	}
+}
+
+/* F O O T E R */
+footer {
+	a {
+		color: var(--secondary) !important;
+	}
+}
+
 /* B U T T O N S */
 .btn {
 	&:hover,

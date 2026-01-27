@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container pb-4">
 	<div class="row">
 		<div class="col">
 			<span class="text-uppercase mb-4 d-block p-3 text-bg-dark">Buttons</span>

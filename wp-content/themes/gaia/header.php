@@ -47,13 +47,6 @@
 				) );
 				?>
 
-				<!-- Search -->
-				<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" method="get"
-					action="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<input type="search" name="s" class="form-control form-control-dark text-bg-dark"
-						placeholder="Search..." aria-label="Search">
-				</form>
-
 				<!-- Buttons -->
 				<div class="text-end">
 					<?php if ( is_user_logged_in() ) : ?>
