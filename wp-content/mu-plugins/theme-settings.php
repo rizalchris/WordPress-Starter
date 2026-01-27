@@ -20,24 +20,37 @@ class Gaia_Templates {
 	}
 
 	private static function scan() {
+
 		$base = get_template_directory() . '/pages';
 
-		foreach ( new RecursiveIteratorIterator(
-			new RecursiveDirectoryIterator( $base )
-		) as $file ) {
+		if ( ! is_dir( $base ) ) {
+			return;
+		}
 
-			if ( $file->getExtension() !== 'php' )
+		$iterator = new RecursiveIteratorIterator(
+			new RecursiveDirectoryIterator(
+				$base,
+				RecursiveDirectoryIterator::SKIP_DOTS
+			)
+		);
+
+		foreach ( $iterator as $file ) {
+
+			if ( $file->getExtension() !== 'php' ) {
 				continue;
+			}
 
-			$headers = get_file_data( $file->getPathname(), [
-				'name' => 'Template Name'
-			] );
+			$headers = get_file_data(
+				$file->getPathname(),
+				[ 'name' => 'Template Name' ]
+			);
 
-			if ( empty( $headers['name'] ) )
+			if ( empty( $headers['name'] ) ) {
 				continue;
+			}
 
 			$relative = str_replace(
-				get_template_directory() . '/',
+				trailingslashit( get_template_directory() ),
 				'',
 				$file->getPathname()
 			);
